@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "vueproject",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authvueprojectaba51c17",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

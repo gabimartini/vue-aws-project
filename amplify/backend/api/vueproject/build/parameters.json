@@ -1,0 +1,13 @@
+{
+    "AppSyncApiName": "vueproject",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authvueprojectaba51c17",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "S3DeploymentBucket": "amplify-vueproject-dev-161520-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/0632ea3cdc83ec6ca4ccd613703b8172218b94ef"
+}

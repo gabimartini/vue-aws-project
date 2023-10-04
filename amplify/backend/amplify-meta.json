@@ -1,0 +1,98 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-vueproject-dev-161520-authRole",
+      "UnauthRoleArn": "arn:aws:iam::974481407370:role/amplify-vueproject-dev-161520-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::974481407370:role/amplify-vueproject-dev-161520-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-vueproject-dev-161520-deployment",
+      "UnauthRoleName": "amplify-vueproject-dev-161520-unauthRole",
+      "StackName": "amplify-vueproject-dev-161520",
+      "StackId": "arn:aws:cloudformation:eu-west-2:974481407370:stack/amplify-vueproject-dev-161520/80dd0240-6136-11ee-b26f-027c78498b54",
+      "AmplifyAppId": "d8ls69ocqhhik"
+    }
+  },
+  "api": {
+    "vueproject": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "vueprojectaba51c17",
+          "attributes": [
+            "UserPoolId"
+          ]
+        }
+      ],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            }
+          },
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authvueprojectaba51c17"
+              }
+            }
+          ]
+        },
+        "GraphQLAPIIdOutput": "fh4hdqtnpjexnkkuq5npbcbtze",
+        "GraphQLAPIEndpointOutput": "https://i7u3fdzwpjauxfv7pupiwldiye.appsync-api.eu-west-2.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-rrl2ipj3djeapbbdykishobuuq"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-vueproject-dev-161520-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apivueproject"
+      },
+      "lastPushTimeStamp": "2023-10-04T14:45:28.628Z",
+      "lastPushDirHash": "9SAPvZAtf1jgH5n+geXYs/UwJL0="
+    }
+  },
+  "auth": {
+    "vueprojectaba51c17": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-vueproject-dev-161520-deployment/amplify-cfn-templates/auth/vueprojectaba51c17-cloudformation-template.json",
+        "logicalId": "authvueprojectaba51c17"
+      },
+      "lastPushTimeStamp": "2023-10-04T14:45:27.761Z",
+      "output": {
+        "UserPoolId": "eu-west-2_Lbu56TgVW",
+        "AppClientIDWeb": "75tsdbktq8ugtnapkc1ej2duv5",
+        "AppClientID": "66hdfgua3rs4o1acpvap0a84gd",
+        "IdentityPoolId": "eu-west-2:c791f1bd-a42b-433f-8a65-2d0d2be22e49",
+        "UserPoolArn": "arn:aws:cognito-idp:eu-west-2:974481407370:userpool/eu-west-2_Lbu56TgVW",
+        "IdentityPoolName": "vueprojectaba51c17_identitypool_aba51c17__dev",
+        "UserPoolName": "vueprojectaba51c17_userpool_aba51c17"
+      },
+      "lastPushDirHash": "QHzPHq3HdPdlEfyPmvEgADpr6nE="
+    }
+  }
+}

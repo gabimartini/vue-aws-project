@@ -1,0 +1,6 @@
+node_modules
+.vscode
+.DS_Store
+amplify/backend/api/vueproject/build/resolvers/
+amplify/#current-cloud-backend/api/vueproject/build/resolvers/
+amplify/hooks/
